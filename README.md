@@ -1,2 +1,2 @@
 # hospital_managment_system
-index.js is the main file.
+My First Web Project Using SQL Database 
