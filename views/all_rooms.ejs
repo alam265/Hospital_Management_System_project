@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Rooms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mb-4">All Rooms</h1>
+
+    <!-- Display Cabins -->
+    <h2>Cabins</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Room No</th>
+                    <th>Patient ID</th>
+                    <th>Doctor ID</th>
+                    <th>Cost</th>
+                    <th>Admit Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% result1.forEach(cabin => { %>
+                    <tr>
+                        <td><%= cabin.room_no %></td>
+                        <td><%= cabin.patient_id %></td>
+                        <td><%= cabin.doctor_id %></td>
+                        <td><%= cabin.cost %></td>
+                        <td><%= cabin.admit_date %></td>
+                        <td>
+                            <form  action="/cabin/<%= cabin.patient_id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-success">Release</button>
+                            </form>
+                        </td>
+
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Display ICU -->
+    <h2>ICU</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Room No</th>
+                    <th>Patient ID</th>
+                    <th>Doctor ID</th>
+                    <th>Cost</th>
+                    <th>Admit Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% result2.forEach(icuRoom => { %>
+                    <tr>
+                        <td><%= icuRoom.room_no %></td>
+                        <td><%= icuRoom.patient_id %></td>
+                        <td><%= icuRoom.doctor_id %></td>
+                        <td><%= icuRoom.cost %></td>
+                        <td><%= icuRoom.admit_date %></td>
+                        <td>
+                            <form  action="/icu/<%= icuRoom.patient_id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-success">Release</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Display Operation Theatre -->
+    <h2>Operation Theatre</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Room No</th>
+                    <th>Patient ID</th>
+                    <th>Doctor ID</th>
+                    <th>Cost</th>
+                    <th>Admit Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% result3.forEach(operationRoom => { %>
+                    <tr>
+                        <td><%= operationRoom.room_no %></td>
+                        <td><%= operationRoom.patient_id %></td>
+                        <td><%= operationRoom.doctor_id %></td>
+                        <td><%= operationRoom.cost %></td>
+                        <td><%= operationRoom.admit_date %></td>
+                        <td>
+                            <form  action="/ot/<%= operationRoom.patient_id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-success">Release</button>
+                            </form>
+                        </td>
+
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

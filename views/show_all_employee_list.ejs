@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Employee List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <header>
+        <h1>ALL EMPLOYEE LIST</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <% for(employee of employees) { %>
+            <div class="col-10">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= employee.name %></h5>
+                        <p class="card-text">ID: <%= employee.employee_id %></p>
+                        <p class="card-text">Phone Number: <%= employee.phone_num %></p>
+                        <p class="card-text">Type: <%= employee.emp_type %></p>
+                        <p class="card-text">Salary: <%= employee.salary %></p>
+                        <p class="card-text">NID: <%= employee.NID %></p>
+                        <p class="card-text">Address: <%= employee.address %></p>
+                        <p class="card-text">Contract: <%= employee.contract %></p>
+                        <form method="get" action="/employee/<%= employee.employee_id %>/edit">
+                            <button class="btn btn-primary">Edit Information</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        <br>
+        <a  class="btn  btn-info" href="/employee/add_new_employee">Add New Employee</a>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

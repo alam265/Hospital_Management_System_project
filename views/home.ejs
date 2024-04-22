@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>XYZ Hospital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+  </style>
+</head>
+<body>
+  <header class="bg-info text-white py-4">
+    <div class="container">
+      <h1>Welcome Admin</h1>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2>Doctors</h2>
+            <p>See Doctors Details</p>
+            <form  action="/all_doctor_list">
+              <button class="btn btn-info">See doctors</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2>Nurses</h2>
+            <p>Find Nurses.</p>
+            <form  action="/all_nurse_list">
+              <button class="btn btn-info">All Nurse Information</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2>Patients</h2>
+            <p>Access Patients Details.</p>
+            <form  action="/all_patient_list">
+              <button class="btn btn-info">All Patient Information</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2>Employees</h2>
+            <p>Information of Employess</p>
+            <form  action="/all_employee">
+              <button class="btn btn-info">All Employee</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2>Appointment</h2>
+            <p>Make Appointments</p>
+            <form  action="/all_appointments">
+              <button class="btn btn-info">See Appointment Information</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2>Rooms</h2>
+            <p>All information about room</p>
+            <form  action="/room_information">
+              <button class="btn btn-info">Room Information</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2>Lab Test</h2>
+            <p>All information about Test</p>
+            <form  action="/lab_tests/home">
+              <button class="btn btn-info">Test Information</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h2>Hire Ambulance</h2>
+            <p>All information about Test</p>
+            <form  action="/all_ambulance_record">
+              <button class="btn btn-info">Info</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <script src="/javascript/validateForm.js"></script>
+
+
+</body>
+</html>

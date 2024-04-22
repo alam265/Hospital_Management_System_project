@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Lab Test Information</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Lab Test Information</h1>
+        <form action="/lab_test/<%= test.test_id %>/edit?_method=PATCH" method="POST">
+            <div class="form-group">
+                <label for="test_name">Test Name:</label>
+                <input type="text" id="test_name" name="test_name" class="form-control" value="<%= test.test_name %>">
+            </div>
+            <div class="form-group">
+                <label for="cost">Cost:</label>
+                <input type="text" id="cost" name="cost" class="form-control" value="<%= test.cost %>">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" class="form-control"><%= test.description %></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</body>
+</html>

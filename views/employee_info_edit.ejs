@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee Information</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Employee Information</h1>
+        <form action="/employee/<%= employee.employee_id %>/edit?_method=PATCH" method="POST">
+            <div class="form-group">
+                <label for="contract">Contract:</label>
+                <input type="text" class="form-control" id="contract" name="contract" value="<%= employee.contract %>">
+            </div>
+            <div class="form-group">
+                <label for="nid">NID:</label>
+                <input type="text" class="form-control" id="nid" name="nid" value="<%= employee.NID %>">
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" id="address" name="address" value="<%= employee.address %>">
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input type="number" class="form-control" id="salary" name="salary" value="<%= employee.salary %>">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
