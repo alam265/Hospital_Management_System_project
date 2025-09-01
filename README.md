@@ -14,7 +14,7 @@ This project serves as a simple Hospital Management System, demonstrating the us
 
 - **Backend Database:** MySQL
 - **Frontend:** EJS (Embedded JavaScript Templates)
-- **Backend/Server:** JavaScript (likely Node.js/Express)
+- **Backend/Server:** JavaScript (Node.js/Express)
 
 ## Features
 
