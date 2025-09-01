@@ -1,7 +1,3 @@
-Thanks for sharing your project description! Here’s a suggested improved README for your Hospital Management System project that incorporates your description and clarifies the purpose, technologies, and usage. You can copy and edit this directly in your README.md file.
-
----
-
 # Hospital Management System
 
 A very basic web project designed to implement and enhance knowledge of MySQL databases and its queries, including joins between tables and basic CRUD operations.
